@@ -7,7 +7,7 @@ package mx.ipn.vista;
 
 import java.io.*;
 import jdk.nashorn.internal.parser.Lexer;
-import mx.ipn.logica.ALexico.*;
+import mx.ipn.logica.ALexico;
 
 /**
  *
@@ -115,7 +115,7 @@ public class AlexicoUI extends javax.swing.JFrame {
             e.printStackTrace();
         }
         Reader read = new BufferedReader(new FileReader("fichero.txt"));
-        
+        Lexer lex = new Lexer(read);
     }
     /**
      * @param args the command line arguments
