@@ -12,7 +12,7 @@ import jdk.nashorn.internal.parser.Lexer;
 import mx.ipn.logica.ALexico.*;
 
 public class AlexicoUI extends javax.swing.JFrame {
-
+    //COMMINT
     public AlexicoUI() {
         initComponents();
     }
