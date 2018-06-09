@@ -5,6 +5,9 @@
  */
 package mx.ipn.vista;
 
+import java.io.File;
+import java.io.PrintWriter;
+
 /**
  *
  * @author arhel
@@ -47,6 +50,11 @@ public class AlexicoUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txtatexto);
 
         btnGenerar.setText("Analizar");
+        btnGenerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGenerarActionPerformed(evt);
+            }
+        });
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -91,6 +99,21 @@ public class AlexicoUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarActionPerformed
+       
+    }//GEN-LAST:event_btnGenerarActionPerformed
+    public void ProbarLexer(){
+          
+          File file = new File("fichero.txt");
+          PrintWriter pw;
+          try {
+            pw = new PrintWriter(file);
+            pw.print(this.txtatexto.getText());
+            pw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * @param args the command line arguments
      */
