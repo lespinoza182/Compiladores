@@ -141,27 +141,15 @@ public class AlexicoUI extends javax.swing.JFrame {
             }
             else{
                 switch(token){
-
-                        case ASIGNAR: case IGUAL: 
-                        case DIFERENTE: case SUMA: 
-                        case MUL: 
-                        case RESTA:;
-                        case DIV: 
-                        case COMILLA: 
-                        case PARENTESIS_CERRADO: 
-                        case MAYOR: 
-                        case MENOR: 
-                        case CORCHETE_ABIERTO: 
-                        case CORCHETE_CERRADO: 
-                        case LLAVE_ABIERTA:
-                        case LLAVE_CERRADA:
-                        case PUNTO_Y_COMA:
-                        case PALABRA_RESERVADA:
+                        case ERROR:
+                          res+="Error símbolo"+ token +"no reconocido";
+                        break;
+                   
                         case INT: case ID: 
                             res+="TOKEN "+token+" "+lex.lexeme+"\n";    
                         break;
                         default:
-                           res+="Error símbolo no reconocido";
+                           res+=token+"\n";
                         break;
 
                 }
