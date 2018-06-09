@@ -5,8 +5,9 @@
  */
 package mx.ipn.vista;
 
-import java.io.File;
-import java.io.PrintWriter;
+import java.io.*;
+import jdk.nashorn.internal.parser.Lexer;
+import mx.ipn.logica.ALexico.*;
 
 /**
  *
@@ -102,7 +103,7 @@ public class AlexicoUI extends javax.swing.JFrame {
     private void btnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarActionPerformed
        
     }//GEN-LAST:event_btnGenerarActionPerformed
-    public void ProbarLexer(){
+    public void ProbarLexer() throws FileNotFoundException{
           
           File file = new File("fichero.txt");
           PrintWriter pw;
@@ -113,6 +114,8 @@ public class AlexicoUI extends javax.swing.JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Reader read = new BufferedReader(new FileReader("fichero.txt"));
+        
     }
     /**
      * @param args the command line arguments
